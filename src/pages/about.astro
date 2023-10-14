@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css"
+
 const pageTitle = "About Me "
 
 const identity = {
@@ -7,11 +9,15 @@ const identity = {
   occupation: "Technical Writer",
   hobbies: ["photography", "birdwatching", "baseball"],
 };
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["HTML", "CSS", "JavaScript", "Astro", "Writing Docs"];
 
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "navy";
+const textCase = "uppercase";
+const fontWeight ="bold"
 ---
 <html lang="en">
 	<head>
@@ -20,16 +26,30 @@ const goal = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		
+		<style define:vars={{skillColor,fontWeight,textCase}}>
+			h1{
+				color:blue;
+				font-size:4rem,
+			}
+			.skill{
+				color:var(--skillColor);
+				fontWeight:var(--fontWeight);
+				text-transform:var(--textCase);
+			}
+		</style>
+	
 	</head>
 	<body>
 		
-		<h1>Astro</h1>
-		<h1>Astro site</h1>
         <h1>{pageTitle}</h1>
-        <h2>...and my learnning diary</h2>
+        <h2>My learnning diary</h2>
         <p>First i want to share my learnning journey from <a href="https://docs.astro.build/en/getting-started/">Astro_Doc</a></p>
         <p>The site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-		
+		<p>My skill : </p>
+		<ul>
+			{skills.map((skill) =><li class="skill">{skill}</li>)}
+		</ul>
 		<hr>
 		
 		{happy && <p>I am happy to be learning Astro!</p>}

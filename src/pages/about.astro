@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css"
-import Navigation from "../components/Navigation.astro"
+import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 
 const pageTitle = "About Me "
@@ -43,7 +43,7 @@ const fontWeight ="bold"
 	
 	</head>
 	<body>
-		
+		<Header />
         <h1>{pageTitle}</h1>
         <h2>My learnning diary</h2>
         <p>First i want to share my learnning journey from <a href="https://docs.astro.build/en/getting-started/">Astro_Doc</a></p>
@@ -60,7 +60,10 @@ const fontWeight ="bold"
 
 		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
-		<Navigation/>
+		
 		<Footer / >
+		<script>
+    		import "../scripts/menu.js"
+		</script>
 	</body>
 </html>

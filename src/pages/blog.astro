@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css"
-import Navigation from "../components/Navigation.astro"
+import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro" 
 const pageTitle = "learnning Blog"
 ---
@@ -13,6 +13,7 @@ const pageTitle = "learnning Blog"
 		<title>Astro</title>
 	</head>
     <body>
+        <Header />
         <p><a href="/">&#128640 this is blog page</p>
         <p><a href="/about">&#128644 all for test</p>
         <p><a href="/blog">&#128658 this is exactily what i want</p>
@@ -25,7 +26,9 @@ const pageTitle = "learnning Blog"
             <li><a href="/posts/post-3">Basic Blog from Astro Part3</a></li>
         </ul>
 
-        <Navigation />
         <Footer />
+        <script>
+    		import "../scripts/menu.js"
+		</script>
     </body>
 </html>

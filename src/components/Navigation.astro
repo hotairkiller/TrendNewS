@@ -1,13 +1,20 @@
 ---
----
 
-  <a href="/">Home</a>
-  <a href="/about/">News</a>
-  <a href="/blog/">Contact</a>
+const {webPage,address1}   = Astro.props;
+---
+<div class="nav-links">
+  <a href={`https://local:4321/${webPage}/`}>{address1}</a>
+</div>
+  
+
+ 
 
 
 <style>
-  a{
-    padding:0.5rem;
-  }
+    a{
+        padding:0.5rem 1rem;
+        color:gray;
+        background-color:#150604;
+        text-decoration: none;
+    }
 </style>

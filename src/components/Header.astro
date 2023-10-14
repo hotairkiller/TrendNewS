@@ -1,0 +1,29 @@
+---
+import Hamburger from "./Hamburger.astro"
+
+const address = {
+  "a":'home',
+  "b":"about",
+  "c":"blog"
+
+}
+import Navigation from "./Navigation.astro"
+
+const { a, b, c } = address;
+
+---
+
+<header>
+    <Hamburger / >
+    <Navigation webPage="/" address1={a}/>
+    <Navigation webPage="about" address1 ={b} />
+    <Navigation webPage="blog"  address1 = {c}/>
+</header>
+
+<style>
+   header{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>

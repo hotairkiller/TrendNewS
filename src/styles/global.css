@@ -14,8 +14,18 @@ html {
   * {
     box-sizing: border-box;
   }
-  
+  hr {
+    color:block;
+  }
   h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
   }
+  
+  a{
+    display:inline;
+    line-height:5px;
+  }
+
+
+  

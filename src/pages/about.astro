@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css"
+import Navigation from "../components/Navigation.astro"
 
 const pageTitle = "About Me "
 
@@ -57,5 +58,7 @@ const fontWeight ="bold"
 		{finished && <p>I finished this tutorial!</p>}
 
 		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
+		<Navigation/>
 	</body>
 </html>

@@ -2,7 +2,7 @@
 import "../styles/global.css"
 import BlogLayout from "../layouts/BlogLayout.astro";
 import BlogPost from "../components/BlogPost.astro"
-const allPosts = await Astro.glob('../posts/*.md')
+const allPosts = await Astro.glob('./posts/*.md')
 
 const pageTitle = "learnning Blog"
 ---

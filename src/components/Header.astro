@@ -1,5 +1,7 @@
 ---
 import Hamburger from "./Hamburger.astro"
+import ThemeIcon from './ThemeIcon.astro';
+import Navigation from "./Navigation.astro"
 
 const address = {
   "a":'home',
@@ -7,7 +9,7 @@ const address = {
   "c":"blog"
 
 }
-import Navigation from "./Navigation.astro"
+
 
 const { a, b, c } = address;
 
@@ -15,9 +17,11 @@ const { a, b, c } = address;
 
 <header>
     <Hamburger / >
+    <ThemeIcon />
     <Navigation webPage="/" address1={a}/>
     <Navigation webPage="about" address1 ={b} />
     <Navigation webPage="blog"  address1 = {c}/>
+    
 </header>
 
 <style>
